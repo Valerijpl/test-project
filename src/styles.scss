@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #F3F7FB;
+  margin: 0px;
+}
+
+* {
+  font-family: Cuprum;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+p {
+  color: #1b1c1de6;
+}
+
+.page-item {
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media only screen and (max-width: 1025px) {
+  .page-item {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .page-item {
+    width: 60%;
+    margin-left: 20%;
+  }
+}

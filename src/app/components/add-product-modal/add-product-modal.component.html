@@ -1,0 +1,33 @@
+<div (click)="closeModal()" class="modal-cover" [style.display]="showModal ? 'block' : 'none'"></div>
+<div class="modal-content" [style.display]="showModal ? 'block' : 'none'">
+  <span (click)="closeModal()" class="close">&times;</span>
+  <div class="modal-container">
+    <p class="add-product-title">Add product</p>
+    <form [formGroup]="productForm">
+      <div class="form-group">
+        <label class="form-control-label" for="name">Name</label>
+        <input id="name" type="text" class="form-control-input" formControlName="name" placeholder="Enter your product name"/>
+      </div>
+      <div class="form-group">
+        <label class="form-control-label" for="company">Company</label>
+        <input id="company" type="text" class="form-control-input" formControlName="company" placeholder="Enter your company name"/>
+      </div>
+      <div class="form-group">
+        <label class="form-control-label" for="price">Price</label>
+        <input id="price" type="number" class="form-control-input" formControlName="price"/>
+      </div>
+      <div class="form-group">
+        <label class="form-control-label" for="description">Description</label>
+        <textarea id="description" class="form-control-input" formControlName="description" placeholder="Enter a description of your product"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-control-label" for="img">Image url</label>
+        <input id="img" type="text" class="form-control-input" formControlName="img" placeholder="Enter your image url here"/>
+      </div>
+    </form>
+    <div class="footer-buttons-container">
+      <button class="close-button" (click)="closeModal()">Cancel</button>
+      <button class="add-button" [disabled]="!productForm.valid || customValidate()" (click)="submitForm()">Add product +</button>
+    </div>
+  </div>
+</div>

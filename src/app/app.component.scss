@@ -1,0 +1,86 @@
+.simple-header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 0.5px solid #ECF2F6
+}
+
+.simple-header-content {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loading {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background-color: #F3F7FB;
+}
+
+.add-product-button {
+  font-size: 20px;
+  color: #fff;
+  background-color: #F8A352;
+  border: 1px solid #F8A352;
+  border-radius: 2px;
+  padding: 8px 12px;
+  margin: 20px 8px 20px 0px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.add-product-button:hover {
+  background-color: #e69140;
+}
+
+.add-product-button:focus {
+  outline: none;
+}
+
+.add-product-button:active {
+  outline: none;
+}
+
+.loading-text {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 20px);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.simple-header-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0px;
+  display: inline-block;
+  padding: 20px 0px;
+}
+
+@media only screen and (max-width: 1025px) {
+  .add-product-button {
+    margin-right: 4px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .add-product-button {
+    margin-right: 2px;
+    font-size: 12px;
+    padding: 4px 4px;
+  }
+
+  .simple-header-title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .add-product-button {
+    margin-right: 16px;
+  }
+}

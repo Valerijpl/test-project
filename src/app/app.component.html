@@ -1,0 +1,13 @@
+<div class="main-page">
+  <div class="simple-header">
+    <div class="simple-header-content page-item">
+      <p class="simple-header-title">Products list app</p>
+      <button class="add-product-button" (click)="openAddProductModal()">Add product +</button>
+    </div>
+  </div>
+  <app-product-list (loaded)="updateLoadedValue($event)"></app-product-list>
+  <app-add-product-modal [showModal]="showModal" (onClose)="closeAddProductModal($event)" (onSuccess)="updateProductList($event)"></app-add-product-modal>
+</div>
+<div class="loading" *ngIf="loaded == false">
+  <p class="loading-text">Loading ...</p>
+</div>
